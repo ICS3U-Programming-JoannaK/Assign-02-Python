@@ -33,10 +33,12 @@ def main():
     area = 4 * math.pi**2 * major_radius * minor_radius  # ** represents exponent
 
     # display surface area and volume
-    print("Volume of the Torus: {:,.3f}".format(volume))
-    print("Area of the Torus: {:,.3f}".format(area))
+    print("Volume of the Torus: {:,.3f}(cm^3)".format(volume))
+    print("Area of the Torus: {:,.3f}(cm^2)".format(area))
 
-    #display exit message
+    # asks user if they want to see the calculation process
+
+    # display exit message
     print("***********************************")
     print("*                                 *")
     print("* Thank you for using my program !*")
