@@ -21,23 +21,24 @@ def main():
     while True:
         major_radius = float(input("Enter the major radius: "))
         minor_radius = float(input("Enter the minor radius: "))
+        unit = input("Enter the units (m, cm, etc): ")
         # check if the major radius is greater than the minor radius
         if major_radius <= minor_radius:
             print(
                 "Error: The major radius should be larger than the minor radius. Please try again.\n"
             )
         else:
-            break  # program doesn't go further if conditions aren't satisfied
+            break  # program doesn't go further if conditions aren't met
 
     # Calculate the surface area and volume
     volume = 2 * math.pi**2 * major_radius * minor_radius**2  # ** represents exponent
     area = 4 * math.pi**2 * major_radius * minor_radius  # ** represents exponent
 
     # display surface area and volume
-    print("Volume of the Torus: {:,.3f}(cm^3)".format(volume))
-    print("Area of the Torus: {:,.3f}(cm^2)".format(area))
+    print("Volume of the Torus: {:,.2f}({}^3)".format(volume,unit))
+    print("Area of the Torus: {:,.2f}({}^2)".format(area,unit))
 
-    # asks user if they want to see the formulas used
+    # Ask user if they want to see the formulas used
     show_formula = input("Would you like to see the formulas used? (yes/no)\n")
     if show_formula == "yes":
         print("Volume = 2π2Rr2\n")
