@@ -8,6 +8,7 @@
 
 import math
 
+
 def main():
     # Greeting card
     print("***********************************")
@@ -36,12 +37,21 @@ def main():
     print("Volume of the Torus: {:,.3f}(cm^3)".format(volume))
     print("Area of the Torus: {:,.3f}(cm^2)".format(area))
 
+    # asks user if they want to see the formulas used
+    show_formula = input("Would you like to see the formulas used? (yes/no)\n")
+    if show_formula == "yes":
+        print("Volume = 2π2Rr2\n")
+        print("Area = 4π2Rr\n")
+    elif show_formula == "no":
+        print("Alright, no formulas will be shown")
+
     # display exit message
     print("***********************************")
     print("*                                 *")
     print("* Thank you for using my program !*")
     print("*                                 *")
     print("***********************************\n")
+
 
 if __name__ == "__main__":
     main()
