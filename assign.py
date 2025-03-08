@@ -36,8 +36,6 @@ def main():
     print("Volume of the Torus: {:,.3f}(cm^3)".format(volume))
     print("Area of the Torus: {:,.3f}(cm^2)".format(area))
 
-    # asks user if they want to see the calculation process
-
     # display exit message
     print("***********************************")
     print("*                                 *")
