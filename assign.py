@@ -8,14 +8,22 @@
 
 import math
 
+def print_greeting():
+    print ("\033[1;35m") # This sets the greeting card to purple 
 
-def main():
-    # Greeting card
+    # greeting card
     print("***********************************")
     print("*                                 *")
     print("* Welcome to the Torus calculator!*")
     print("*                                 *")
     print("***********************************\n")
+
+    # rest color to default 
+    print ("\033[0m")
+
+def main():
+    # Display greeting card in purple
+    print_greeting()
 
     # Get the user input for major and minor radius
     while True:
@@ -25,7 +33,7 @@ def main():
         # check if the major radius is greater than the minor radius
         if major_radius <= minor_radius:
             print(
-                "Error: The major radius should be larger than the minor radius. Please try again.\n"
+                "Error: The major radius should be larger than the minor radius. Please try again.\n" # This will show if minor radius is greater than major radius
             )
         else:
             break  # program doesn't go further if conditions aren't met
