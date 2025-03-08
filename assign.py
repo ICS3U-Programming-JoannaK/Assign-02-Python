@@ -10,11 +10,11 @@ import math
 
 def main():
     # Greeting card
-    print("********************************")
-    print("*                              *")
-    print("*       Welcome user !         *")
-    print("*                              *")
-    print("********************************\n")
+    print("***********************************")
+    print("*                                 *")
+    print("* Welcome to the Torus calculator!*")
+    print("*                                 *")
+    print("***********************************\n")
 
     # Get the user input for major and minor radius
     while True:
@@ -35,6 +35,13 @@ def main():
     # display surface area and volume
     print("Volume of the Torus: {:,.3f}".format(volume))
     print("Area of the Torus: {:,.3f}".format(area))
+
+    #display exit message
+    print("***********************************")
+    print("*                                 *")
+    print("* Thank you for using my program !*")
+    print("*                                 *")
+    print("***********************************\n")
 
 if __name__ == "__main__":
     main()
