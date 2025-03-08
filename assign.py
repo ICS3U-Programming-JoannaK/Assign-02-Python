@@ -30,7 +30,7 @@ def main():
             break  # program doesn't go further if conditions aren't satisfied
 
     # Calculate the surface area and volume
-    volume = math.tau**2 * major_radius * minor_radius**2  # ** represents exponent
+    volume = 2 * math.pi**2 * major_radius * minor_radius**2  # ** represents exponent
     area = 4 * math.pi**2 * major_radius * minor_radius  # ** represents exponent
 
     # display surface area and volume
