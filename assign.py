@@ -22,17 +22,19 @@ def main():
         minor_radius = float(input("Enter the minor radius: "))
         # check if the major radius is greater than the minor radius
         if major_radius <= minor_radius:
-            print("Error: The major radius should be larger than the minor radius. Please try again.\n")
+            print(
+                "Error: The major radius should be larger than the minor radius. Please try again.\n"
+            )
         else:
-            break  #program doesn't go further if conditions aren't satisfied
+            break  # program doesn't go further if conditions aren't satisfied
 
     # Calculate the surface area and volume
     volume = math.tau**2 * major_radius * minor_radius**2  # ** represents exponent
     area = 4 * math.pi**2 * major_radius * minor_radius  # ** represents exponent
 
     # display surface area and volume
-    print("Volume of the Torus: {:,.2f}".format(volume))
-    print("Area of the Torus:  {:,.2f}".format(area))
+    print("Volume of the Torus: {:,.3f}".format(volume))
+    print("Area of the Torus: {:,.3f}".format(area))
 
 if __name__ == "__main__":
     main()
