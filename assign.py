@@ -8,8 +8,9 @@
 
 import math
 
+
 def print_greeting():
-    print ("\033[1;35m") # This sets the greeting card to purple 
+    print("\033[1;35m")  # This sets the greeting card to purple
 
     # greeting card
     print("***********************************")
@@ -18,8 +19,9 @@ def print_greeting():
     print("*                                 *")
     print("***********************************\n")
 
-    # rest color to default 
-    print ("\033[0m")
+    # rest color to default
+    print("\033[0m")
+
 
 def main():
     # Display greeting card in purple
@@ -33,7 +35,7 @@ def main():
         # check if the major radius is greater than the minor radius
         if major_radius <= minor_radius:
             print(
-                "Error: The major radius should be larger than the minor radius. Please try again.\n" # This will show if minor radius is greater than major radius
+                "Error: The major radius should be larger than the minor radius. Please try again.\n"  # This will show if minor radius is greater than major radius
             )
         else:
             break  # program doesn't go further if conditions aren't met
@@ -43,8 +45,8 @@ def main():
     area = 4 * math.pi**2 * major_radius * minor_radius  # ** represents exponent
 
     # display surface area and volume
-    print("Volume of the Torus: {:,.2f}({}^3)".format(volume,unit))
-    print("Area of the Torus: {:,.2f}({}^2)".format(area,unit))
+    print("Volume of the Torus: {:,.2f}({}^3)".format(volume, unit))
+    print("Area of the Torus: {:,.2f}({}^2)".format(area, unit))
 
     # Ask user if they want to see the formulas used
     show_formula = input("Would you like to see the formulas used? (yes/no)\n")
