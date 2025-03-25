@@ -28,19 +28,16 @@ def main():
     print_greeting()
 
     # Get the user input for major and minor radius
-    while True:
-        major_radius = float(input("Enter the major radius: "))
-        minor_radius = float(input("Enter the minor radius: "))
-        unit = input("Enter the units (m, cm, etc): ")
-        # check if the major radius is greater than the minor radius
-        if major_radius <= minor_radius:
-            print(
-                "Error: The major radius should be larger than the minor radius. Please try again.\n"  # This will show if minor radius is greater than major radius
-            )
-        else:
-            break  # program doesn't go further if conditions aren't met
-
-    # Calculate the surface area and volume
+    major_radius = float(input("Enter the major radius: "))
+    minor_radius = float(input("Enter the minor radius: "))
+    unit = input("Enter the units (m, cm, etc): ")
+    
+    # check if the major radius is greater than the minor radius
+    if major_radius < minor_radius:
+        print("Error: The major radius should be larger than "
+        "the minor radius. Please try again.\n")  # This will show if minor radius is greater than major radius
+    
+    # calculate the volume and area
     volume = 2 * math.pi**2 * major_radius * minor_radius**2  # ** represents exponent
     area = 4 * math.pi**2 * major_radius * minor_radius  # ** represents exponent
 
@@ -48,15 +45,14 @@ def main():
     print("Volume of the Torus: {:,.2f}({}^3)".format(volume, unit))
     print("Area of the Torus: {:,.2f}({}^2)".format(area, unit))
 
-    # Ask user if they want to see the formulas used
-    show_formula = input("Would you like to see the formulas used? (yes/no)\n")
-    if show_formula == "yes":
-        print("Volume = 2π2Rr2\n")
-        print("Area = 4π2Rr\n")
-    elif show_formula == "no":
-        print("Alright, no formulas will be shown")
+    # Display the formulas used
+    print("\n")
+    print("Formulas used:")
+    print("Volume = 2π2Rr2")
+    print("Area = 4π2Rr")
 
     # display exit message
+    print("\033[1;35m")
     print("***********************************")
     print("*                                 *")
     print("* Thank you for using my program !*")
