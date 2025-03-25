@@ -31,12 +31,14 @@ def main():
     major_radius = float(input("Enter the major radius: "))
     minor_radius = float(input("Enter the minor radius: "))
     unit = input("Enter the units (m, cm, etc): ")
-    
+
     # check if the major radius is greater than the minor radius
     if major_radius < minor_radius:
-        print("Error: The major radius should be larger than "
-        "the minor radius. Please try again.\n")  # This will show if minor radius is greater than major radius
-    
+        print(
+            "Error: The major radius should be larger than "
+            "the minor radius. Please try again.\n"
+        )  # This will show if minor radius is greater than major radius
+
     # calculate the volume and area
     volume = 2 * math.pi**2 * major_radius * minor_radius**2  # ** represents exponent
     area = 4 * math.pi**2 * major_radius * minor_radius  # ** represents exponent
