@@ -25,7 +25,17 @@ def print_greeting():
 
 def main():
     # Display greeting card in purple
-    print_greeting()
+    print("\033[1;35m")  # This sets the greeting card to purple
+
+    # greeting card
+    print("***********************************")
+    print("*                                 *")
+    print("* Welcome to the Torus calculator!*")
+    print("*                                 *")
+    print("***********************************\n")
+
+    # rest color to default
+    print("\033[0m")
 
     # Get the user input for major and minor radius
     major_radius = float(input("Enter the major radius: "))
