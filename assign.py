@@ -24,16 +24,13 @@ def main():
     print("\033[0m")
 
     # Get the user input for major and minor radius
+    print(
+        "The major radius should be larger than "
+        "the minor radius. Please try again.\n"
+    )
     major_radius = float(input("Enter the major radius: "))
     minor_radius = float(input("Enter the minor radius: "))
     unit = input("Enter the units (m, cm, etc): ")
-
-    # check if the major radius is greater than the minor radius
-    if major_radius < minor_radius:
-        print(
-            "Error: The major radius should be larger than "
-            "the minor radius. Please try again.\n"
-        )  # This will show if minor radius is greater than major radius
 
     # calculate the volume and area
     volume = 2 * math.pi**2 * major_radius * minor_radius**2  # ** represents exponent
@@ -48,6 +45,18 @@ def main():
     print("Formulas used:")
     print("Volume = 2π2Rr2")
     print("Area = 4π2Rr")
+
+    # Display information on the shape
+    print("\n")
+    print("------More on the Torus shape------")
+    print("A Torus is a 3D shape that resembles a donut. It has two radius:")
+    print(
+        "1. Major Radius (R): This is the distance from \n"
+        "the center of hole to the center of the tube\n"
+    )
+    print("Minor radius (r): This is the radius of the tube itself")
+    print("the distance from the center of the" "tube to the surface of the Torus\n")
+    print("Thank you for using the Torus calculator ! Goodbye!\n")
 
     # display exit message
     print("\033[1;35m")
