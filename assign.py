@@ -26,7 +26,7 @@ def main():
     # Get the user input for major and minor radius
     print(
         "The major radius should be larger than "
-        "the minor radius. Please try again.\n"
+        "the minor radius.\n"
     )
     major_radius = float(input("Enter the major radius: "))
     minor_radius = float(input("Enter the minor radius: "))
